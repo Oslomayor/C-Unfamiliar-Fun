@@ -7,11 +7,11 @@ C 语言允许 $ 作为变量名
 #include <stdio.h>
 int main()
 {
-	int $;
+    int $;
     $ = 1111;
     printf("%d\n",$);
-	system("pause");
-	return 0;
+    system("pause");
+    return 0;
 }
 ```
 ![](https://github.com/Oslomayor/Markdown-Imglib/blob/master/Imgs/%E7%BE%8E%E5%85%83%E7%AC%A6%E5%8F%B7%E4%BD%9C%E5%8F%98%E9%87%8F%E5%90%8D.png?raw=true)  
