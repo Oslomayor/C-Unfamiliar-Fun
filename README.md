@@ -17,7 +17,38 @@ int main()
 ![](https://github.com/Oslomayor/Markdown-Imglib/blob/master/Imgs/%E7%BE%8E%E5%85%83%E7%AC%A6%E5%8F%B7%E4%BD%9C%E5%8F%98%E9%87%8F%E5%90%8D.png?raw=true)  
 
 ### 2. 字节对齐
-C 语言面试的考点，考到一大波人   
+C 语言面试的考点，考倒一大波人   
+
+有这么两个结构体：  
+
+> ```C
+> struct man
+> {
+>     char hisCountry;
+>     char hisWife;
+>     int earnMoney;
+> };
+> ```
+>
+> ```C
+> struct B
+> {
+>     char a;
+>     int b;
+>     short c;
+> };
+> ```
+
+已知 sizeof(char) =1,  sizeof(short)=2, sizeof(int)=4, 请问这两个结构体占用的空间大小是多少字节？
+
+答案分别是8和12，请看下图，一目了然
+
+![](https://github.com/Oslomayor/Markdown-Imglib/blob/master/Imgs/%E5%AD%97%E8%8A%82%E5%AF%B9%E9%BD%90.png?raw=true)
+
+
+
+假如之前没有了解字节对齐，是不是有点意外？可以跑一下代码验证并加深印象
+
 ```C
 #include <stdio.h>
 
@@ -28,7 +59,7 @@ C 语言面试的考点，考到一大波人
 // size = 8
 struct man
 {
-	char hisCountry;
+    char hisCountry;
     char hisWife;
     // 填充2个空字节,无论是否定义，结构体的size相同
     // char reserved[2];
@@ -51,10 +82,10 @@ struct B
 
 int main()
 {
-	long long size_longlong;
-	double size_double;
+    long long size_longlong;
+    double size_double;
     float size_float;
-	int size_int;
+    int size_int;
     short size_short;
     char size_char;
     
@@ -82,7 +113,7 @@ int main()
     printf("testB.b addr = %d\n",&testB.b);
     printf("testB.c addr = %d\n",&testB.c);
     
-	system("pause");
-	return 0;
+    system("pause");
+    return 0;
 }
 ```
