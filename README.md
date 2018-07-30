@@ -69,7 +69,7 @@ struct man
 // size = 12
 struct B
 {
-	char a;
+    char a;
     // 填充3个空字节,无论是否定义，结构体的size相同
     // char reserved1[3]; 
     int b;
