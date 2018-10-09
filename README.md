@@ -142,3 +142,19 @@ int main()
 #define square(x) (x)*(x)
 ```
 
+### 4.printf 输出格式符
+我们一般都知道输出16进制数可以采用 printf 格式控制符 %x, 其实还有 %#x 这种格式控制符，它们的输出有所区别  
+运行以下代码观察到结果  
+```c
+# include <stdio.h>
+int main(void)
+{
+    int i = 33;
+    printf("%x\n", i);   
+    printf("%X\n", i);   
+    printf("%#x\n", i);   
+    printf("%#X\n", i);   
+    return 0;
+}  
+```
+![](https://github.com/Oslomayor/Markdown-Imglib/blob/master/Imgs/printf%E8%BE%93%E5%87%BA%E7%9A%84%23%E5%92%8Cx.png?raw=true)
