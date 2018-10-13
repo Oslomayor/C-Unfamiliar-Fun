@@ -12,13 +12,13 @@ int array[] = {23,34,12,17,204,99,16};
 
 int main()
 {
-	int d = -1; 
+    int d = -1; 
     printf("d = %d\n",d);
     printf("array_size = %d\n",ARRAY_SIZE);
     if(d <= ARRAY_SIZE)
-		printf("d <= array_size\n");
+        printf("d <= array_size\n");
     else
-		printf("d > array_size\n");
-	while(1);
-	return 0;
+        printf("d > array_size\n");
+    while(1);
+    return 0;
 }
